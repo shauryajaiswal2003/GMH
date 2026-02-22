@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gupta Medical Hall Premium Print</title>
+
+<style>
+
+@page {
+    size: 4.25in 5.25in;
+    margin: 0;
+}
+
+body{
+    margin:0;
+    font-family: 'Mangal', Arial, sans-serif;
+}
+
+/* PAGE */
+.page{
+    width:4.25in;
+    height:5.25in;
+    position:relative;
+}
+
+/* SAFE AREA */
+.envelope{
+    position:absolute;
+    top:0.125in;
+    left:0.125in;
+    width:4in;
+    height:5in;
+    border:2px solid #000;
+    box-sizing:border-box;
+    overflow:hidden;
+    position:relative;
+}
+
+/* BACKGROUND IMAGE */
+.envelope::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("shop.jpg") no-repeat center center;
+    background-size:cover;
+    opacity:0.15;   /* control image fade here */
+    z-index:0;
+}
+
+/* WHITE OVERLAY FOR READABILITY */
+.envelope::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white;
+    opacity:0.85;
+    z-index:1;
+}
+
+/* CONTENT ABOVE BACKGROUND */
+.envelope > *{
+    position:relative;
+    z-index:2;
+}
+
+/* HEADER */
+.header{
+    background:linear-gradient(90deg,#0d47a1,#1976d2);
+    color:white;
+    text-align:center;
+    padding:14px 5px 10px 5px;
+}
+
+.title{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.subtitle{
+    font-size:13px;
+    margin-top:4px;
+}
+
+/* MAIN */
+.main{
+    padding:12px;
+    text-align:center;
+}
+
+.cross{
+    font-size:30px;
+    color:#d10000;
+    margin:6px 0;
+}
+
+.owner{
+    font-size:15px;
+    font-weight:bold;
+    color:#c2185b;
+}
+
+.contact{
+    font-size:12px;
+    margin-top:5px;
+}
+
+.special{
+    margin-top:8px;
+    font-size:11px;
+    font-weight:bold;
+    color:#0d47a1;
+    line-height:16px;
+}
+
+.yellow-box{
+    background:#ffd600;
+    margin:10px 20px;
+    padding:7px;
+    border-radius:25px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+/* BOTTOM BOX */
+.bottom-box{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:#f8f4e6;
+    border-top:3px solid #0d47a1;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+.medicine-box{
+    border:2px solid #000;
+    padding:8px;
+    font-size:12px;
+    font-weight:bold;
+    line-height:22px;
+    text-align:left;
+    border-radius:6px;
+    background:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+<div class="envelope">
+
+    <div class="header">
+        <div class="title">गुप्ता मेडिकल हॉल</div>
+        <div class="subtitle">रेलवे स्टेशन रोड, भाटपार रानी</div>
+    </div>
+
+    <div class="main">
+
+        <div class="cross">✚</div>
+
+        <div class="owner">
+            प्रो. धीरेंद्र कुमार गुप्ता
+        </div>
+
+        <div class="contact">
+            📞 7007661585 <br>
+            GST: 09AINPG9108Q1ZH
+        </div>
+
+        <div class="special">
+            देवरिया • गोरखपुर • SGPGI • AIIMS <br>
+            विवेक शर्मा मेडिसिन उपलब्ध
+        </div>
+
+        <div class="yellow-box">
+            ★ विश्वास ★ उचित कीमत ★ गुणवत्ता ★ बेहतर सेवा
+        </div>
+
+    </div>
+
+    <div class="bottom-box">
+        <div class="medicine-box">
+            ☐ सुबह खाली पेट <br>
+            ☐ सुबह नाश्ते के बाद <br>
+            ☐ दोपहर भोजन के बाद <br>
+            ☐ शाम को <br>
+            ☐ रात भोजन के बाद
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
